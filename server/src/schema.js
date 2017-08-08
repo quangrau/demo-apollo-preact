@@ -2,6 +2,11 @@ import { makeExecutableSchema } from 'graphql-tools'
 import { resolvers } from './resolvers'
 
 const typeDefs = `
+    input MessageInput {
+        channelId: ID!
+        text: String
+    }
+
     type Channel {
         id: ID!
         name: String
@@ -18,9 +23,8 @@ const typeDefs = `
         channel(id: ID!): Channel
     }
 
-    input MessageInput {
-        channelId: ID!
-        text: String
+    type Subscription {
+        messageAdded(channelId: ID!): Message
     }
 
     # The mutation root type, used to define all mutations.

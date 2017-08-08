@@ -31,7 +31,7 @@ a {
 
 .App-content {
   width: 300px;
-  margin: 60px auto;
+  margin: 30px auto;
 }
 
 .channelsList {
@@ -96,6 +96,7 @@ a {
   border: none;
   font-size: 32px;
   color: #33a9e0;
+  margin-bottom: 30px;
 }
 
 .messagesList {
